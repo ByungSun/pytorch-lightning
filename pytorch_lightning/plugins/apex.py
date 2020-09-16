@@ -28,7 +28,7 @@ class ApexPlugin:
 
         if optimizers is not None:
             self.trainer.reinit_scheduler_properties(optimizers, self.trainer.lr_schedulers)
-        
+
         return model, optimizers
 
     def configure_apex(self, model, optimizers, amp_level):

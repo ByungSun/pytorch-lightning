@@ -139,7 +139,6 @@ class DDPBackend(DDPBase):
                 " This is not supported in DDP mode, switch to `distributed_backend='ddp_spawn'` instead."
             )
 
-
     def model_to_device(self, model, process_idx, is_master):
         gpu_idx = process_idx
 
