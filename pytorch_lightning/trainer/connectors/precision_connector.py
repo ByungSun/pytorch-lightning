@@ -74,6 +74,8 @@ class PrecisionConnector:
             )
 
     def connect(self, model):
+        optimizers = getattr(self.trainer, 'optimizers')
+
         if self.backend:
             model, optimizers = self.backend.connect(model, optimizers)
             self.trainer.optimizers = optimizers
